@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="">
+
+    <title>Tuition and Fees Payment Authorization for Graduate Students</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="col-xs-12">
+        <h1>Tuition and Fees Payment Authorization for Graduate Students</h1>
+        <p class="lead">Santa Clara University | School of Engineering</p>
+      </div>
+
+      <form>
+        <div class="form-group col-xs-12 col-sm-4">
+          <label for="nameInput">Name</label>
+          <input type="text" class="form-control" id="nameInput" placeholder="John Doe">
+        </div>
+        <div class="form-group col-xs-12 col-sm-4">
+          <label for="idInput">SCU ID</label>
+          <input type="text" class="form-control" id="idInput" placeholder="W1234567">
+        </div>
+        <div class="form-group col-xs-12 col-sm-4">
+          <label for="advisorInput">Advisor</label>
+          <input type="text" class="form-control" id="advisorInput" placeholder="Prof. Doe">
+        </div>
+        <div class="form-group col-xs-12 col-sm-4">
+          <label for="yearInput">Academic Year</label>
+          <input type="text" class="form-control" id="yearInput" placeholder="Academic Year">
+        </div>
+        <div class="form-group col-xs-12 col-sm-4">
+          <label for="quarterInput">Quarter</label>
+          <input type="text" class="form-control" id="quarterInput" placeholder="Quarter">
+        </div>
+        <div class="form-group col-xs-12 col-sm-4">
+          <label for="deptProgInput">Hiring Department or Program</label>
+          <input type="text" class="form-control" id="deptProgInput" placeholder="Hiring Department Program">
+        </div>
+
+        <div class="form-group col-xs-12 col-sm-4">
+          <label for="radio-inline">Role:&nbsp;</label>
+          <div class="radios">
+            <div class="radio-inline">
+              <label><input type="radio" name="roleRadio" onclick="handleRadioClick(this);" value="ta">TA</label>
+            </div>
+            <div class="radio-inline">
+              <label><input type="radio" name="roleRadio" onclick="handleRadioClick(this);" value="ra">RA</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group col-xs-12 col-sm-4">
+          <label for="majorSelect">Major:</label>
+          <select class="form-control" id="majorSelect">
+            <option disabled selected>Select one...</option>
+            <option>Applied Mathematics</option>
+            <option>Bioengineering</option>
+            <option>Civil Engineering</option>
+            <option>Computer Science and Engineering</option>
+            <option>Electrical Engineering</option>
+            <option>Engineering Management &amp; Leadership</option>
+            <option>Mechanical Engineering</option>
+            <option>Software Engineering</option>
+            <option>Sustainable Energy</option>
+          </select>
+        </div>
+
+        <div id="raFundingSource">
+          <div class="col-xs-12">
+            <h3>Funding Source</h3>
+          </div>
+          <div class="form-group col-xs-12 col-sm-2">
+            <label for="fundInput">Fund</label>
+            <input type="text" class="form-control" id="fundInput" placeholder="Fund">
+          </div>
+          <div class="form-group col-xs-12 col-sm-2">
+            <label for="deptInput">Dept</label>
+            <input type="text" class="form-control" id="deptInput" placeholder="Dept">
+          </div>
+          <div class="form-group col-xs-12 col-sm-2">
+            <label for="pgmCodeInput">Pgm Code</label>
+            <input type="text" class="form-control" id="pgmCodeInput" placeholder="Pgm Code">
+          </div>
+          <div class="form-group col-xs-12 col-sm-2">
+            <label for="activityInput">Activity</label>
+            <input type="text" class="form-control" id="activityInput" placeholder="Activity">
+          </div>
+          <div class="form-group col-xs-12 col-sm-2">
+            <label for="classInput">Class</label>
+            <input type="text" class="form-control" id="classInput" placeholder="Class">
+          </div>
+          <div class="form-group col-xs-12 col-sm-2">
+            <label for="pIdInput">Project ID</label>
+            <input type="text" class="form-control" id="pIdInput" placeholder="Project ID">
+          </div>
+        </div>
+
+        <div class="col-xs-12">
+          <h3>Courses</h3>
+        </div>
+        <div class="form-group col-xs-12 col-sm-3">
+          <label for="cIdInput">Course ID</label>
+          <input type="text" class="form-control" id="cIdInput" placeholder="ex: MECH207">
+        </div>
+        <div class="form-group col-xs-12 col-sm-6">
+          <label for="courseInput">Course Title</label>
+          <input type="text" class="form-control" id="courseInput" placeholder="ex: Mechanical Systems">
+        </div>
+        <div class="form-group col-xs-12 col-sm-3">
+          <label for="creditInput"># of Credits</label>
+          <input type="text" class="form-control" id="creditInput" placeholder="ex: 4">
+        </div>
+        <div class="col-xs-12 text-center">
+          <button class="btn btn-primary btn-sm">Add Another Course</button>
+        </div>
+
+        <div class="col-xs-12">
+          <h4>5 Total units of tuition to pay ($928 per unit - FY1617)</h4>
+          <h4>66.6% FTE appointment for TA positions</h4>
+
+          <h3>TOTAL: $500</h3>
+
+        </div>
+
+        
+        <div class="form-group col-xs-12 col-sm-4 col-sm-offset-4 text-center">
+          <label for="emailInput">Email of next person in the approval chain</label>
+          <input type="text" class="form-control" id="emailInput" placeholder="Advisor/Project Director email">
+        </div>
+        <div class="col-xs-12 text-center">
+          <div class="checkbox">
+              <label><input type="checkbox" value="">All of the information in this form is correct to the best of my knowledge.</label>
+          </div>
+        </div>
+
+        <div class="col-xs-12 text-center">
+          <button type="submit" class="btn btn-success btn-lg">Submit</button>
+        </div>
+
+      </form>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
