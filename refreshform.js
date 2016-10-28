@@ -69,9 +69,9 @@ $(document).ready(function(){
 			courseTitle41: courseTitle4,
 			numCredits41: numCredits4,
 			courseId51: courseId5,
-			courseTitle51: courseTitle5
-			numCredits51: numCredits5
-			courseId61: courseId6
+			courseTitle51: courseTitle5,
+			numCredits51: numCredits5,
+			courseId61: courseId6,
 			courseTitle61: courseTitle6,
 			numCredits61: numCredits6,
 			

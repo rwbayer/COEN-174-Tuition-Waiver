@@ -146,6 +146,10 @@
             <option disabled selected><?php echo $major ?></option>
           </select>
         </div>
+        <div class="form-group col-xs-12 col-sm-4">
+          <label for="emailInput">Email</label>
+          <input type="text" class="form-control" id="sEmailInput" placeholder="" value="<?php echo $email1?>" disabled>
+        </div>
         <?php
           echo("<div id=\"taPercentFTE\">
           <div class=\"form-group col-xs-12 col-sm-4\">");
@@ -240,90 +244,90 @@
               {
                 echo("<div class=\"form-group col-xs-12 col-sm-3\">
                 <label for=\"cIdInput\">Course ID</label>
-                <input type=\"text\" class=\"form-control\" id=\"cIdInput\" placeholder=\"\" value=\"" . $courseId1 . "\" disabled>
+                <input type=\"text\" class=\"form-control\" id=\"cId0\" placeholder=\"\" value=\"" . $courseId1 . "\" disabled>
               </div>
               <div class=\"form-group col-xs-12 col-sm-6\">
                 <label for=\"courseInput\">Course Title</label>
-                <input type=\"text\" class=\"form-control\" id=\"courseInput\" placeholder=\"\" value=\"" . $courseTitle1 . "\"disabled>
+                <input type=\"text\" class=\"form-control\" id=\"cTitle0\" placeholder=\"\" value=\"" . $courseTitle1 . "\"disabled>
               </div>
               <div class=\"form-group col-xs-12 col-sm-3\">
                 <label for=\"creditInput\"># of Credits</label>
-                <input type=\"text\" class=\"form-control\" id=\"creditInput\" placeholder=\"\" value=\"" . $numCredits1 . "\" disabled>
+                <input type=\"text\" class=\"form-control creditInput\" id=\"cCredit0\" placeholder=\"\" value=\"" . $numCredits1 . "\" disabled>
               </div>");
               }
               if ($courseId2 != "")
               {
                 echo("<div class=\"form-group col-xs-12 col-sm-3\">
                 <label for=\"cIdInput\">Course ID</label>
-                <input type=\"text\" class=\"form-control\" id=\"cIdInput\" placeholder=\"\" value=\"" . $courseId2 . "\" disabled>
+                <input type=\"text\" class=\"form-control\" id=\"cId1\" placeholder=\"\" value=\"" . $courseId2 . "\" disabled>
               </div>
               <div class=\"form-group col-xs-12 col-sm-6\">
                 <label for=\"courseInput\">Course Title</label>
-                <input type=\"text\" class=\"form-control\" id=\"courseInput\" placeholder=\"\" value=\"" . $courseTitle2 . "\"disabled>
+                <input type=\"text\" class=\"form-control\" id=\"cTitle1\" placeholder=\"\" value=\"" . $courseTitle2 . "\"disabled>
               </div>
               <div class=\"form-group col-xs-12 col-sm-3\">
                 <label for=\"creditInput\"># of Credits</label>
-                <input type=\"text\" class=\"form-control\" id=\"creditInput\" placeholder=\"\" value=\"" . $numCredits2 . "\" disabled>
+                <input type=\"text\" class=\"form-control creditInput\" id=\"cCredit1\" placeholder=\"\" value=\"" . $numCredits2 . "\" disabled>
               </div>");
               }
               if ($courseId3 != "")
               {
                 echo("<div class=\"form-group col-xs-12 col-sm-3\">
                 <label for=\"cIdInput\">Course ID</label>
-                <input type=\"text\" class=\"form-control\" id=\"cIdInput\" placeholder=\"\" value=\"" . $courseId3 . "\" disabled>
+                <input type=\"text\" class=\"form-control\" id=\"cId2\" placeholder=\"\" value=\"" . $courseId3 . "\" disabled>
               </div>
               <div class=\"form-group col-xs-12 col-sm-6\">
                 <label for=\"courseInput\">Course Title</label>
-                <input type=\"text\" class=\"form-control\" id=\"courseInput\" placeholder=\"\" value=\"" . $courseTitle3 . "\"disabled>
+                <input type=\"text\" class=\"form-control\" id=\"cTitle2\" placeholder=\"\" value=\"" . $courseTitle3 . "\"disabled>
               </div>
               <div class=\"form-group col-xs-12 col-sm-3\">
                 <label for=\"creditInput\"># of Credits</label>
-                <input type=\"text\" class=\"form-control\" id=\"creditInput\" placeholder=\"\" value=\"" . $numCredits3 . "\" disabled>
+                <input type=\"text\" class=\"form-control creditInput\" id=\"cCredit2\" placeholder=\"\" value=\"" . $numCredits3 . "\" disabled>
               </div>");
               }
               if ($courseId4 != "")
               {
                 echo("<div class=\"form-group col-xs-12 col-sm-3\">
                 <label for=\"cIdInput\">Course ID</label>
-                <input type=\"text\" class=\"form-control\" id=\"cIdInput\" placeholder=\"\" value=\"" . $courseId4 . "\" disabled>
+                <input type=\"text\" class=\"form-control\" id=\"cId3\" placeholder=\"\" value=\"" . $courseId4 . "\" disabled>
               </div>
               <div class=\"form-group col-xs-12 col-sm-6\">
                 <label for=\"courseInput\">Course Title</label>
-                <input type=\"text\" class=\"form-control\" id=\"courseInput\" placeholder=\"\" value=\"" . $courseTitle4 . "\"disabled>
+                <input type=\"text\" class=\"form-control\" id=\"cTitle3\" placeholder=\"\" value=\"" . $courseTitle4 . "\"disabled>
               </div>
               <div class=\"form-group col-xs-12 col-sm-3\">
                 <label for=\"creditInput\"># of Credits</label>
-                <input type=\"text\" class=\"form-control\" id=\"creditInput\" placeholder=\"\" value=\"" . $numCredits4 . "\" disabled>
+                <input type=\"text\" class=\"form-control creditInput\" id=\"cCredit3\" placeholder=\"\" value=\"" . $numCredits4 . "\" disabled>
               </div>");
               }
               if ($courseId5 != "")
               {
                 echo("<div class=\"form-group col-xs-12 col-sm-3\">
                 <label for=\"cIdInput\">Course ID</label>
-                <input type=\"text\" class=\"form-control\" id=\"cIdInput\" placeholder=\"\" value=\"" . $courseId5 . "\" disabled>
+                <input type=\"text\" class=\"form-control\" id=\"cId4\" placeholder=\"\" value=\"" . $courseId5 . "\" disabled>
               </div>
               <div class=\"form-group col-xs-12 col-sm-6\">
                 <label for=\"courseInput\">Course Title</label>
-                <input type=\"text\" class=\"form-control\" id=\"courseInput\" placeholder=\"\" value=\"" . $courseTitle5 . "\"disabled>
+                <input type=\"text\" class=\"form-control\" id=\"cTitle4\" placeholder=\"\" value=\"" . $courseTitle5 . "\"disabled>
               </div>
               <div class=\"form-group col-xs-12 col-sm-3\">
                 <label for=\"creditInput\"># of Credits</label>
-                <input type=\"text\" class=\"form-control\" id=\"creditInput\" placeholder=\"\" value=\"" . $numCredits5 . "\" disabled>
+                <input type=\"text\" class=\"form-control creditInput\" id=\"cCredit4\" placeholder=\"\" value=\"" . $numCredits5 . "\" disabled>
               </div>");
               }
               if ($courseId6 != "")
               {
                 echo("<div class=\"form-group col-xs-12 col-sm-3\">
                 <label for=\"cIdInput\">Course ID</label>
-                <input type=\"text\" class=\"form-control\" id=\"cIdInput\" placeholder=\"\" value=\"" . $courseId6 . "\" disabled>
+                <input type=\"text\" class=\"form-control\" id=\"cId5\" placeholder=\"\" value=\"" . $courseId6 . "\" disabled>
               </div>
               <div class=\"form-group col-xs-12 col-sm-6\">
                 <label for=\"courseInput\">Course Title</label>
-                <input type=\"text\" class=\"form-control\" id=\"courseInput\" placeholder=\"\" value=\"" . $courseTitle6 . "\"disabled>
+                <input type=\"text\" class=\"form-control\" id=\"cTitle5\" placeholder=\"\" value=\"" . $courseTitle6 . "\"disabled>
               </div>
               <div class=\"form-group col-xs-12 col-sm-3\">
                 <label for=\"creditInput\"># of Credits</label>
-                <input type=\"text\" class=\"form-control\" id=\"creditInput\" placeholder=\"\" value=\"" . $numCredits6 . "\" disabled>
+                <input type=\"text\" class=\"form-control creditInput\" id=\"cCredit5\" placeholder=\"\" value=\"" . $numCredits6 . "\" disabled>
               </div>");
               }
               
@@ -339,32 +343,32 @@
         </div>
 
         <div class="col-xs-12 col-sm-4 col-sm-offset-4 text-center">
-          <p class="formLabel">Previous Approvers:</label>
-          <ol>
-            <?php
-              if ($email1 !== '')
-              {
-                echo("<li>" . $email1 . "</li>");
-              }
+          <?php
               if ($email2 !== '')
               {
+                echo("
+                <p class=\"formLabel\">Previous Approvers:</label>
+                <ol>");
+            
                 echo("<li>" . $email2 . "</li>");
-              }
-              if ($email3 !== '')
-              {
-                echo("<li>" . $email3 . "</li>");
-              }
-              if ($email4 !== '')
-              {
-                echo("<li>" . $email4 . "</li>");
-              }
-              if ($email5 !== '')
-              {
-                echo("<li>" . $email5 . "</li>");
-              }
 
+                if ($email3 !== '')
+                {
+                  echo("<li>" . $email3 . "</li>");
+                }
+                if ($email4 !== '')
+                {
+                  echo("<li>" . $email4 . "</li>");
+                }
+                if ($email5 !== '')
+                {
+                  echo("<li>" . $email5 . "</li>");
+                }
+                echo("</ol>");
+
+              }
             ?>
-          </ol>
+          
         </div>
         
         <div class="form-group col-xs-12 col-sm-4 col-sm-offset-4 text-center">
