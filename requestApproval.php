@@ -116,7 +116,7 @@
           <label for="radio-inline">Role:&nbsp;</label>
           <div class="radios">
             <?php
-              if ($userType == "TA")
+              if ($userType == "ta")
               {
                 echo("<div class=\"radio-inline\">
                       <label><input type=\"radio\" name=\"roleRadio\" onclick=\"handleRadioClick(this);\" value=\"ta\" checked disabled>TA</label>
@@ -149,7 +149,7 @@
         <?php
           echo("<div id=\"taPercentFTE\">
           <div class=\"form-group col-xs-12 col-sm-4\">");
-          if ($userType == "TA")
+          if ($userType == "ta")
           {
             echo("<label for=\"radio-inline\">Percent FTE Appointment:&nbsp;</label>
             <div class=\"radios\">");
@@ -196,7 +196,7 @@
               echo("</div>");
           }
           echo("</div></div>");
-      if ($userType == "RA")
+      if ($userType == "ra")
       {
           echo("<div id=\"raFundingSource\">
             <div class=\"col-xs-12\">

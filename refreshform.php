@@ -30,7 +30,7 @@ if($userType2 == 'ta'){
 $courseId12 = $_POST['courseId11']; 
 $courseTitle12 = $_POST['courseTitle11'];
 $numCredits12 = $_POST['numCredits11'];
-/*
+
 $courseId22 = $_POST['courseId21'];
 $courseTitle22 = $_POST['courseTitle21'];
 $numCredits22 = $_POST['numCredits21'];
@@ -46,7 +46,7 @@ $numCredits52 = $_POST['numCredits51'];
 $courseId62 = $_POST['courseId61'];
 $courseTitle62 = $_POST['courseTitle61'];
 $numCredits62 = $_POST['numCredits61'];
-*/
+
 $email2 = $_POST['email1'];
 
 $formId = generateRandomString(15);

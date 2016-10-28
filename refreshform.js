@@ -59,7 +59,7 @@ $(document).ready(function(){
 			courseId11: courseId1,
 			courseTitle11: courseTitle1,
 			numCredits11: numCredits1,
-			/*courseId21: courseId2,
+			courseId21: courseId2,
 			courseTitle21: courseTitle2,
 			numCredits21: numCredits2,
 			courseId31: courseId3,
@@ -74,7 +74,7 @@ $(document).ready(function(){
 			courseId61: courseId6
 			courseTitle61: courseTitle6,
 			numCredits61: numCredits6,
-			*/
+			
 			email1: email
 			}, function(data){
 				alert(data);
