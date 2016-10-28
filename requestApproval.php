@@ -158,7 +158,7 @@
             echo("<label for=\"radio-inline\">Percent FTE Appointment:&nbsp;</label>
             <div class=\"radios\">");
              
-                if ($percentFTE == "33.3%")
+                if ($percentFTE == "33.3")
                 {
                   echo("<div class=\"radio-inline\">
                         <label><input type=\"radio\" name=\"taFTERadio\" value=\"33.3\" checked disabled>33.3%</label>
@@ -171,7 +171,7 @@
                       </div>"
                   );
                 }
-                else if ($percentFTE == "66.6%")
+                else if ($percentFTE == "66.6")
                 {
                     echo("<div class=\"radio-inline\">
                         <label><input type=\"radio\" name=\"taFTERadio\" value=\"33.3\" disabled>33.3%</label>
