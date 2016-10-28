@@ -63,7 +63,15 @@ if($mail){
 	echo "email failed to send";
 }
 $destination = "data/".$filename;
-$txt = $name2.",".$id2.",".$advisor2.",".$year2.",".$quarter2.",".$dept2.",".$major2.",".$userType2.",".$email2;
+$userInfo = $name2.",".$id2.",".$advisor2.",".$year2.",".$quarter2.",".$dept2.",".$userType2.",".$major2.",";
+if($userType2 == 'ta'){
+	$userInfo .= $percentFTE2.",";
+}else{
+	$userInfo .= $fundsrc2.",".$fundDept2.",".$pgmCode2.",".$activity2.",".$class2.",".$projId2.",";
+}
+$courses = $courseId12.",".$courseTitle12.",".$numCredits12.",".$courseId22.",".$courseTitle22.",".$numCredits22.",".$courseId32.",".$courseTitle32.",".$numCredits32.",".$courseId42.",".$courseTitle42.",".$numCredits42.",".$courseId52.",".$courseTitle52.",".$numCredits52.",".$courseId62.",".$courseTitle62.",".$numCredits62.",";
+
+$txt = $userInfo.$courses.$email2;
 $myfile = fopen($destination, "w");
 fwrite($myfile, $txt);
 fclose($myfile);
