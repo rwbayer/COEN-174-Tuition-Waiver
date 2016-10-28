@@ -1,9 +1,8 @@
 <?php
-  // $headerStringValue = $_REQUEST['key'];
+  $headerStringValue = $_REQUEST['key'];
 
-  // $nameOfFile = "data/". $headerStringValue . ".php";
-  $nameOfFile = "sampleData.txt";
-  $userFile = fopen($nameOfFile,"r") or die ("Error, file could not be openned or does not exist");
+  $nameOfFile = "data/". $headerStringValue . ".txt";
+  $userFile = fopen($nameOfFile,"r") or die ("Error, file could not be opened or does not exist");
   $contents = fread($userFile, filesize($nameOfFile));
   $varData = explode(",",$contents);
 
