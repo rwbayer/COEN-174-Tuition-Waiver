@@ -38,11 +38,17 @@ function updateTotal()
 
 	if (totalUnits > 8)
 	{
-		totalUnits == 8;
+		totalUnits = 8;
+		$("#totalUnits").text(totalUnits + " (max. allowed)");
+	}
+	else
+	{
+		$("#totalUnits").text(totalUnits);
 	}
 
 	var totalCash = totalUnits * 928;
 
-	$("#total").text(totalCash);
+
+	$("#totalCash").text(totalCash);
 
 }
