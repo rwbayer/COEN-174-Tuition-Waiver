@@ -13,6 +13,7 @@ function handleRadioClick(myRadio)
 }
 $(document).ready(function(e)
 {
+	var courseCounter=1;
 	updateTotal();
 	// add another course section to the page
 	$("#addCourse").on("click", function(e)
@@ -20,7 +21,7 @@ $(document).ready(function(e)
 		// make the page not reload on button click
 		e.preventDefault();
 
-		$("#courses").append("<div class=\"form-group col-xs-12 col-sm-3\"><label for=\"cIdInput\">Course ID</label><input type=\"text\" class=\"form-control\" id=\"cIdInput\" placeholder=\"ex: MECH207\"></div><div class=\"form-group col-xs-12 col-sm-6\"><label for=\"courseInput\">Course Title</label><input type=\"text\" class=\"form-control\" id=\"courseInput\" placeholder=\"ex: Mechanical Systems\"></div><div class=\"form-group col-xs-12 col-sm-3\"><label for=\"creditInput\"># of Credits</label><input type=\"text\" class=\"form-control\" id=\"creditInput\" placeholder=\"ex: 4\"></div>");
+		$("#courses").append("<div class=\"form-group col-xs-12 col-sm-3\"><label for=\"cId" + courseCounter + "\">Course ID</label><input type=\"text\" class=\"form-control\" id=\"cTitle" + courseCounter + "\" placeholder=\"ex: MECH207\"></div><div class=\"form-group col-xs-12 col-sm-6\"><label for=\"courseInput\">Course Title</label><input type=\"text\" class=\"form-control\" id=\"courseInput\" placeholder=\"ex: Mechanical Systems\"></div><div class=\"form-group col-xs-12 col-sm-3\"><label for=\"creditInput\"># of Credits</label><input type=\"text\" class=\"form-control\" id=\"cCredit" + courseCounter + "\" placeholder=\"ex: 4\"></div>");
 	});
 
 	$("#creditInput").change(function() {
