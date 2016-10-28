@@ -15,26 +15,27 @@ $(document).ready(function(){
 		var activity = $("#activityInput").val();
 		var curClass = $("#classInput").val();
 		var projId = $("#pIdInput").val();
-		var courseId1 = $("#cId0").val();
-		var courseTitle1 = $("#cTitle0").val();
-		var numCredits1 = $("#cCredit0").val();
-		var courseId2 = $("#cId1").val();
-		var courseTitle2 = $("#cTitle1").val();
-		var numCredits2 = $("#cCredit1").val();
-		var courseId3 = $("#cId2").val();
-		var courseTitle3 = $("#cTitle2").val();
-		var numCredits3 = $("#cCredit2").val();
-		var courseId4 = $("#cId3").val();
-		var courseTitle4 = $("#cTitle3").val();
-		var numCredits4 = $("#cCredit3").val();
-		var courseId5 = $("#cId4").val();
-		var courseTitle5 = $("#cTitle4").val();
-		var numCredits5 = $("#cCredit4").val();
-		var courseId6 = $("#cId5").val();
-		var courseTitle6 = $("#cTitle5").val();
-		var numCredits6 = $("#cCredit5").val();
-	
+		var courseId1 = $("#cIdInput").val();
+		var courseTitle1 = $("#courseInput").val();
+		var numCredits1 = $("#creditInput").val();
+		var courseId2 = $("#cIdInput1").val();
+		var courseTitle2 = $("#courseInput1").val();
+		var numCredits2 = $("#creditInput1").val();
+		var courseId3 = $("#cIdInput2").val();
+		var courseTitle3 = $("#courseInput2").val();
+		var numCredits3 = $("#creditInput2").val();
+		var courseId4 = $("#cIdInput3").val();
+		var courseTitle4 = $("#courseInput3").val();
+		var numCredits4 = $("#creditInput3").val();
+		var courseId5 = $("#cIdInput4").val();
+		var courseTitle5 = $("#courseInput4").val();
+		var numCredits5 = $("#creditInput4").val();
+		var courseId6 = $("#cIdInput5").val();
+		var courseTitle6 = $("#courseInput5").val();
+		var numCredits6 = $("#creditInput5").val();
+		
 		var email = $("#emailInput").val();
+		var semail = $("#sEmailInput").val();
 		
 
 		if(nameInput == '' || id == '' || advisor == '' || year == '' || quarter == '' || dept == '' || major == '' || userType == '' || email == ''){
@@ -75,7 +76,8 @@ $(document).ready(function(){
 			courseTitle61: courseTitle6,
 			numCredits61: numCredits6,
 			
-			email1: email
+			email1: email,
+			semail1: semail
 			}, function(data){
 				alert(data);
 				$('#form')[0].reset();

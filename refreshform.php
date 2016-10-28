@@ -48,6 +48,7 @@ $courseTitle62 = $_POST['courseTitle61'];
 $numCredits62 = $_POST['numCredits61'];
 
 $email2 = $_POST['email1'];
+$semail2 = $_POST['semail1'];
 
 $formId = generateRandomString(15);
 $filename = $formId.".txt";
@@ -71,7 +72,7 @@ if($userType2 == 'ta'){
 }
 $courses = $courseId12.",".$courseTitle12.",".$numCredits12.",".$courseId22.",".$courseTitle22.",".$numCredits22.",".$courseId32.",".$courseTitle32.",".$numCredits32.",".$courseId42.",".$courseTitle42.",".$numCredits42.",".$courseId52.",".$courseTitle52.",".$numCredits52.",".$courseId62.",".$courseTitle62.",".$numCredits62.",";
 
-$txt = $userInfo.$courses.$email2;
+$txt = $userInfo.$courses.$semail2.",".$email2;
 $myfile = fopen($destination, "w");
 fwrite($myfile, $txt);
 fclose($myfile);
