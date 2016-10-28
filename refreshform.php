@@ -16,13 +16,17 @@ $quarter2 = $_POST['quarter1'];
 $dept2 = $_POST['dept1'];
 $userType2 = $_POST['userType1'];
 $major2 = $_POST['major1'];
-$percentFTE2 = $_POST['percentFTE1'];
-$fundSrc2 = $_POST['fundSrc1'];
-$fundDept2 = $_POST['fundDept1'];
-$pgmCode2 = $_POST['pgmCode1'];
-$activity2 = $_POST['activity1'];
-$class2 = $_POST['curClass1'];
-$projId2 = $_POST['projId1']; 
+if($userType2 == 'ta'){
+	$percentFTE2 = $_POST['percentFTE1'];
+}else{
+	$fundSrc2 = $_POST['fundSrc1'];
+	$fundDept2 = $_POST['fundDept1'];
+	$pgmCode2 = $_POST['pgmCode1'];
+	$activity2 = $_POST['activity1'];
+	$class2 = $_POST['curClass1'];
+	$projId2 = $_POST['projId1']; 
+}
+
 $courseId12 = $_POST['courseId11']; 
 $courseTitle12 = $_POST['courseTitle11'];
 $numCredits12 = $_POST['numCredits11'];
