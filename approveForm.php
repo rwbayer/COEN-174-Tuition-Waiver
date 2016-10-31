@@ -78,7 +78,7 @@
 	}
 
 	$userInfo = $name.",".$id.",".$advisor.",".$year.",".$quarter.",".$dept.",".$userType.",".$major.",";
-	if($userType2 == 'ta')
+	if($userType == 'ta')
 	{
 		$userInfo .= $percentFTE.",,,,,,,";
 	}

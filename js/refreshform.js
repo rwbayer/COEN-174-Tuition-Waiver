@@ -33,7 +33,10 @@ $(document).ready(function(){
 		var courseId6 = $("#cId5").val();
 		var courseTitle6 = $("#cTitle5").val();
 		var numCredits6 = $("#cCredit5").val();
-		
+			
+		console.log("print out of 3's value: " + courseId4);
+
+
 		var email = $("#emailInput").val();
 		var semail = $("#sEmailInput").val();
 		

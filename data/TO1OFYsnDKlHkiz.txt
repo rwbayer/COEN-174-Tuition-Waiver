@@ -1,0 +1,1 @@
+John Doe,W12345,Prof doe,2019,Spring,ELEN,ta,Bioengineering,100,,,,,,,MECH 2017,Mech sys,4,,,,,,,,,,,,,,,,rbayer@scu.edu,rbayer@scu.edu,,,
