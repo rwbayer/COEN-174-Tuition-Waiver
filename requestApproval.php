@@ -47,6 +47,13 @@
 
   fclose($userFile);
 
+  $isScottAndrews = false;
+
+  if ($email1 == 'rbayer@scu.edu' || $email2 == 'rbayer@scu.edu' || $email3 == 'rbayer@scu.edu' || $email4 == 'rbayer@scu.edu' || $email5 == 'rbayer@scu.edu')
+  {
+    $isScottAndrews = true;
+  }
+
 ?>
 
 
@@ -371,11 +378,16 @@
             ?>
           
         </div>
+        <?php
+        if (!$isScottAndrews)
+        {
+          echo("<div class=\"form-group col-xs-12 col-sm-4 col-sm-offset-4 text-center noPrint\">
+          <label for=\"emailInput\">Email of next person in the approval chain</label>
+          <input type=\"text\" class=\"form-control\" id=\"emailInput\" placeholder=\"Advisor/Project Director email\">
+        </div>");
+        }
         
-        <div class="form-group col-xs-12 col-sm-4 col-sm-offset-4 text-center noPrint">
-          <label for="emailInput">Email of next person in the approval chain</label>
-          <input type="text" class="form-control" id="emailInput" placeholder="Advisor/Project Director email">
-        </div>
+        ?>
  
         <div class="col-xs-12 text-center noPrint">
           <div class="checkbox">

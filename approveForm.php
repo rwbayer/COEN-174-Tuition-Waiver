@@ -67,14 +67,21 @@
 	$header = "From: no-reply@SCUTuitionForm.com";
 	$url = "students.engr.scu.edu/~rbayer/COEN174/requestApproval.php?key=".$key;
 	$msg = "You're approval has been requested for the Tuition & Fees Authorization Form provided at the following link: ".$url;
-	$mail = mail($emailOfNextApprover, $subject, $msg, $header);
-	if($mail)
+	if ($emailOfNextApprover != "isScottAndrews")
 	{
-		echo("email sent successfully");
+		$mail = mail($emailOfNextApprover, $subject, $msg, $header);
+		if($mail)
+		{
+			echo("email sent successfully");
+		}
+		else
+		{
+			echo("email failed to send");
+		}
 	}
 	else
 	{
-		echo("email failed to send");
+		echo("successfully approved. use browser to print");
 	}
 
 	$userInfo = $name.",".$id.",".$advisor.",".$year.",".$quarter.",".$dept.",".$userType.",".$major.",";
