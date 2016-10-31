@@ -1,1 +1,0 @@
-Robert Bayer,W1022854,Atkinson,2017,Winter,SCU,ra,Bioengineering,,,COEN,1234,RA,174,98765,COEN 174,Software Engineering,4,COEN 146,Networks,5,,,,,,,,,,,,,rbayer@scu.edu,rbayer@scu.edu

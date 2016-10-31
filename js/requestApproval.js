@@ -16,8 +16,15 @@ $("#approve").click(function()
 			emailOfApprover: emailOfApprover
 		}, function(data)
 		{
+			if (emailOfApprover == "rbayer@scu.edu")
+			{
+				location.reload();
+			}
+			else
+			{
+				$('#form')[0].reset();
+			}
 			alert(data);
-			$('#form')[0].reset();
 		});
 	}
 });

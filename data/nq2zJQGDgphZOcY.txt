@@ -1,1 +1,0 @@
-John Doe,W123455,Prof. Doe,2017,Winter,COEN,ta,Computer Science and Engineering,33.3,,,,,,,MECH 2017,Mechanical Systems,4,COEN 184,Software Engineering,5,,,,,,,,,,,,,rbayer@scu.edu,apolatnick@scu.edu
