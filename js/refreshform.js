@@ -39,6 +39,36 @@ $(document).ready(function(){
 
 		var email = $("#emailInput").val();
 		var semail = $("#sEmailInput").val();
+		if(courseId1 == null){
+			courseId1 = '';
+			courseTitle1 = '';
+			numCredits1 = '';
+		}
+		if(courseId2 == null){
+			courseId2 = '';
+			courseTitle2 = '';
+			numCredits2 = '';
+		}
+		if(courseId3 == null){
+			courseId3 = '';
+			courseTitle3 = '';
+			numCredits3 = '';
+		}
+		if(courseId4 == null){
+			courseId4 = '';
+			courseTitle4 = '';
+			numCredits4 = '';
+		}
+		if(courseId5 == null){
+			courseId5 = '';
+			courseTitle5 = '';
+			numCredits5 = '';
+		}
+		if(courseId6 == null){
+			courseId6 = '';
+			courseTitle6 = '';
+			numCredits6 = '';
+		}
 		
 
 		if(nameInput == '' || id == '' || advisor == '' || year == '' || quarter == '' || dept == '' || major == '' || userType == '' || email == ''){
