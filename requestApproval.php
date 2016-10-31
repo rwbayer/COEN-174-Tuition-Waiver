@@ -67,6 +67,8 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <meta name="key" content="<?php echo $headerStringValue ?>"/>
+
     <link href="css/request.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -86,7 +88,7 @@
       <div class="col-xs-12">
         <p>Hello, <?php echo $name ?> requests approval for the information listed below. Please review the provided info, insert the name of the next recipient for the form, and either reject or accept the information.</p>
       </div>
-      <form>
+      <form id="form" name="form">
         <div class="form-group col-xs-12 col-sm-4">
           <label for="nameInput">Name</label>
           <input type="text" class="form-control" id="nameInput" placeholder="" value="<?php echo $name ?>" disabled>
@@ -402,5 +404,6 @@
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/requestApproval.js"></script>
   </body>
 </html>
