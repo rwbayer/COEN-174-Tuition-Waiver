@@ -379,10 +379,10 @@
 
         <div class="col-xs-12 text-center">
           <div class="col-xs-12 col-sm-6">
-            <button type="submit" class="btn btn-danger btn-lg">Reject</button>
+            <input type="button" id="reject" class="btn btn-danger btn-lg" value="Reject">
           </div>
           <div class="col-xs-12 col-sm-6">
-            <button type="submit" class="btn btn-success btn-lg">Accept</button>
+            <input type="button" id="approve" class="btn btn-success btn-lg" value="Accept">
           </div>
         </div>
 
