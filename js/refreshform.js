@@ -69,7 +69,7 @@ $(document).ready(function(){
 		
 
 
-		if(nameInput == '' || id == '' || advisor == '' || year == '' || quarter == '' || dept == '' || major == '' || userType == '' || email == '')
+		if(userType == null || nameInput == '' || id == '' || advisor == '' || year == '' || quarter == '' || dept == '' || major == '' || userType == '' || email == '')
 		{
 			alert("Insertion Failed, Some Fields are Blank");
 		}
