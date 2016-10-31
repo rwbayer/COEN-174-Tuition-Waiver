@@ -30,7 +30,6 @@ if($userType2 == 'ta'){
 $courseId12 = $_POST['courseId11']; 
 $courseTitle12 = $_POST['courseTitle11'];
 $numCredits12 = $_POST['numCredits11'];
-
 $courseId22 = $_POST['courseId21'];
 $courseTitle22 = $_POST['courseTitle21'];
 $numCredits22 = $_POST['numCredits21'];
@@ -68,7 +67,7 @@ $userInfo = $name2.",".$id2.",".$advisor2.",".$year2.",".$quarter2.",".$dept2.",
 if($userType2 == 'ta'){
 	$userInfo .= $percentFTE2.",,,,,,,";
 }else{
-	$userInfo .= ",".$fundsrc2.",".$fundDept2.",".$pgmCode2.",".$activity2.",".$class2.",".$projId2.",";
+	$userInfo .= ",".$fundSrc2.",".$fundDept2.",".$pgmCode2.",".$activity2.",".$class2.",".$projId2.",";
 }
 $courses = $courseId12.",".$courseTitle12.",".$numCredits12.",".$courseId22.",".$courseTitle22.",".$numCredits22.",".$courseId32.",".$courseTitle32.",".$numCredits32.",".$courseId42.",".$courseTitle42.",".$numCredits42.",".$courseId52.",".$courseTitle52.",".$numCredits52.",".$courseId62.",".$courseTitle62.",".$numCredits62.",";
 
