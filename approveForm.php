@@ -1,6 +1,6 @@
 <?php	
 	$key = $_POST['key'];
-	$emailOfApprover = $_POST['emailOfApprover'];
+	$emailOfNextApprover = $_POST['emailOfApprover'];
 
 	$nameOfFile = "data/". $key . ".txt";
 	$userFile = fopen($nameOfFile,"r") or die ("Error, file could not be opened or does not exist");
@@ -51,27 +51,47 @@
 	// save the email in the next available spot
 	if ($email3 == '')
 	{
-		$email3 = $emailOfApprover;
+		$email3 = $emailOfNextApprover;
 	}
 	else if ($email4 == '')
 	{
-		$email4 = $emailOfApprover;
+		$email4 = $emailOfNextApprover;
 	}
 	else if ($email5 == '')
 	{
-		$email5 == $emailOfApprover;
+		$email5 == $emailOfNextApprover;
 	}
 
-	
 
-	$rejectEmail = mail($email1, $subject, $msg, $header);
-	if($rejectEmail)
+	$subject = "Approval Requested";
+	$header = "From: no-reply@SCUTuitionForm.com";
+	$url = "students.engr.scu.edu/~rbayer/COEN174/requestApproval.php?key=".$key;
+	$msg = "You're approval has been requested for the Tuition & Fees Authorization Form provided at the following link: ".$url;
+	$mail = mail($emailOfNextApprover, $subject, $msg, $header);
+	if($mail)
 	{
-		echo("E-mail sent successfully");
+		echo("email sent successfully");
 	}
 	else
 	{
-		echo("E-mail failed to send");
+		echo("email failed to send");
 	}
+
+	$userInfo = $name.",".$id.",".$advisor.",".$year.",".$quarter.",".$dept.",".$userType.",".$major.",";
+	if($userType2 == 'ta')
+	{
+		$userInfo .= $percentFTE.",,,,,,,";
+	}
+	else
+	{
+		$userInfo .= ",". $fundSrc.",".$fundDept.",".$pgmCode.",".$activity.",".$class.",".$projId.",";
+	}
+
+	$courses = $courseId1.",".$courseTitle1.",".$numCredits1.",".$courseId2.",".$courseTitle2.",".$numCredits2.",".$courseId3.",".$courseTitle3.",".$numCredits3.",".$courseId4.",".$courseTitle4.",".$numCredits4.",".$courseId5.",".$courseTitle5.",".$numCredits5.",".$courseId6.",".$courseTitle6.",".$numCredits6.",";
+
+	$txt = $userInfo.$courses.$email1.",".$email2.",".$email3.",".$email4.",".$email5;
+	$myfile = fopen($nameOfFile, "w");
+	fwrite($myfile, $txt);
+	fclose($myfile);
 
 ?>

@@ -2,6 +2,7 @@ $("#approve").click(function()
 {
 	var emailOfApprover = $("#emailInput").val();
 	var key = $("meta[name=key]").attr("content");
+	console.log("Key is: "+ key);
 
 	if(emailOfApprover == '')
 	{
