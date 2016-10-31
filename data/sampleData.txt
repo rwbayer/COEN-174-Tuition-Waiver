@@ -1,1 +1,1 @@
-Alexander Polatnick,W0967538,Fang,2017,fall,Computer Engineering,TA,Software Engineering,,Santa Clara,COEN, 12345,labs,COEN12,54321,90876,COEN70,4,78356,COEN160,4,05673,COEN171,4,15624,COEN164,2,15624,COEN164,2,15624,COEN164,2,apolatnick@scu.edu,rbayer@scu.edu,rbayer@scu.edu,,
+Alexander Polatnick,W0967538,Fang,2017,fall,Computer Engineering,TA,Software Engineering,,Santa Clara,COEN, 12345,labs,COEN12,54321,90876,COEN70,4,78356,COEN160,4,05673,COEN171,4,15624,COEN164,2,15624,COEN164,2,15624,COEN164,2,apolatnick@scu.edu,rbayer@scu.edu,rbayer@scu.edu,asd,

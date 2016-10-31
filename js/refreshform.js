@@ -33,9 +33,6 @@ $(document).ready(function(){
 		var courseId6 = $("#cId5").val();
 		var courseTitle6 = $("#cTitle5").val();
 		var numCredits6 = $("#cCredit5").val();
-			
-		console.log("print out of 3's value: " + courseId4);
-
 
 		var email = $("#emailInput").val();
 		var semail = $("#sEmailInput").val();
@@ -71,9 +68,17 @@ $(document).ready(function(){
 		}
 		
 
-		if(nameInput == '' || id == '' || advisor == '' || year == '' || quarter == '' || dept == '' || major == '' || userType == '' || email == ''){
+
+		if(nameInput == '' || id == '' || advisor == '' || year == '' || quarter == '' || dept == '' || major == '' || userType == '' || email == '')
+		{
 			alert("Insertion Failed, Some Fields are Blank");
-		}else{
+		}
+		else if ($('#signature:checkbox:checked').length < 1)
+		{
+			alert("You must check the checkbox to confirm the form is correct to the best of your knowledge.");
+		}
+		else
+		{
 			$.post("refreshform.php", {
 			name1: nameInput,
 			id1: id,

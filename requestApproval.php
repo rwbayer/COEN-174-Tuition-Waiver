@@ -377,6 +377,11 @@
           <input type="text" class="form-control" id="emailInput" placeholder="Advisor/Project Director email">
         </div>
  
+        <div class="col-xs-12 text-center noPrint">
+          <div class="checkbox">
+              <label><input type="checkbox" id="signature">All of the information in this form is correct to the best of my knowledge.</label>
+          </div>
+        </div>
 
         <div class="col-xs-12 text-center noPrint">
           <div class="col-xs-12 col-sm-6">
