@@ -71,6 +71,8 @@
 
     <link href="css/request.css" rel="stylesheet">
 
+    <link rel="stylesheet" media="print" href="css/print.css">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -370,13 +372,13 @@
           
         </div>
         
-        <div class="form-group col-xs-12 col-sm-4 col-sm-offset-4 text-center">
+        <div class="form-group col-xs-12 col-sm-4 col-sm-offset-4 text-center noPrint">
           <label for="emailInput">Email of next person in the approval chain</label>
           <input type="text" class="form-control" id="emailInput" placeholder="Advisor/Project Director email">
         </div>
  
 
-        <div class="col-xs-12 text-center">
+        <div class="col-xs-12 text-center noPrint">
           <div class="col-xs-12 col-sm-6">
             <input type="button" id="reject" class="btn btn-danger btn-lg" value="Reject">
           </div>
