@@ -1,0 +1,1 @@
+John Dowww,W1022854,Atkinson,2018,Spring,COEN,ra,Computer Science and Engineering,,SCU,COEN,1234,0990,174,12,MECH 207,Mechanical System,4,COEN 194,Senior Design,2,COEN 174,Software Engineering,5,,,,,,,,,,rbayer@scu.edu,rbayer@scu.edu

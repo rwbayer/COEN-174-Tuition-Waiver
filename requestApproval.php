@@ -346,7 +346,7 @@
 
         <div class="col-xs-12 col-sm-4 col-sm-offset-4 text-center">
           <?php
-              if ($email2 !== '')
+              if ($email3 !== '')
               {
                 echo("
                 <p class=\"formLabel\">Previous Approvers:</label>
@@ -354,18 +354,15 @@
             
                 echo("<li>" . $email2 . "</li>");
 
-                if ($email3 !== '')
+                if ($email4 !== '')
                 {
                   echo("<li>" . $email3 . "</li>");
                 }
-                if ($email4 !== '')
+                if ($email5 !== '')
                 {
                   echo("<li>" . $email4 . "</li>");
                 }
-                if ($email5 !== '')
-                {
-                  echo("<li>" . $email5 . "</li>");
-                }
+                
                 echo("</ol>");
 
               }

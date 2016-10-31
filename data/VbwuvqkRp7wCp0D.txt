@@ -1,0 +1,1 @@
+John Doe,W12345,Prof. Deo,2018,Winter,ELEN,ta,Computer Science and Engineering,,,,,,,,MECH 2017 ,Mech sys,4,COEN 194,Senior Design,2,,,,,,,,,,,,,rbayer@scu.edu,rbayer@scu.edu,rbayer@scu.edu,,
