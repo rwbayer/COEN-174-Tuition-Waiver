@@ -36,7 +36,6 @@ $(document).ready(function(e)
 		// make the page not reload on button click
 		e.preventDefault();
 
-		console.log($(".courseRow").last());
 		$(".courseRow:last").remove();
 	});
 });
