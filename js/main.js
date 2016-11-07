@@ -21,15 +21,23 @@ $(document).ready(function(e)
 		// make the page not reload on button click
 		e.preventDefault();
 
-		$("#courses").append("<div class=\"form-group col-xs-12 col-sm-3\"><label for=\"cId" + courseCounter + "\">Course ID</label><input type=\"text\" class=\"form-control\" id=\"cId" + courseCounter + "\" placeholder=\"ex: MECH207\"></div><div class=\"form-group col-xs-12 col-sm-6\"><label for=\"courseInput\">Course Title</label><input type=\"text\" class=\"form-control\" id=\"cTitle" + courseCounter + "\" placeholder=\"ex: Mechanical Systems\"></div><div class=\"form-group col-xs-12 col-sm-3\"><label for=\"creditInput\"># of Credits</label><input type=\"text\" class=\"form-control creditInput\" class=\"cCredit" + courseCounter + "\" id=\"cCredit" + courseCounter + "\" placeholder=\"ex: 4\"></div>");
-		$(".creditInput").change(function() {
-			updateTotal();
-		});
+		$("#courses").append("<div class=\"row courseRow\"><div class=\"form-group col-xs-12 col-sm-3\"><label for=\"cId" + courseCounter + "\">Course ID</label><input type=\"text\" class=\"form-control\" id=\"cId" + courseCounter + "\" placeholder=\"ex: MECH207\"></div><div class=\"form-group col-xs-12 col-sm-6\"><label for=\"courseInput\">Course Title</label><input type=\"text\" class=\"form-control\" id=\"cTitle" + courseCounter + "\" placeholder=\"ex: Mechanical Systems\"></div><div class=\"form-group col-xs-12 col-sm-2\"><label for=\"creditInput\"># of Credits</label><input type=\"text\" class=\"form-control creditInput\" class=\"cCredit" + courseCounter + "\" id=\"cCredit" + courseCounter + "\" placeholder=\"ex: 4\"></div><div class=\"form-group col-xs-12 col-sm-1\"><button class=\"btn  btn-danger removeRow\" type=\"button\">Remove</button></div></div>");
+
 		courseCounter++;
 	});
 
-	$(".creditInput").change(function() {
+	$(document.body).on('change', '.creditInput', function() 
+	{
 		updateTotal();
+	});
+
+	$(document.body).on('click', '.removeRow', function(e)
+	{
+		// make the page not reload on button click
+		e.preventDefault();
+
+		console.log($(".courseRow").last());
+		$(".courseRow:last").remove();
 	});
 });
 
@@ -38,15 +46,23 @@ function updateTotal()
 	var totalUnits = 0;
 	$(".creditInput").each(function() {
 		var currentVal =  parseInt($(this).val());
+		if (isNaN(currentVal))
+		{
+			currentVal = 0;
+		}
     	totalUnits = (totalUnits + currentVal);
 	});
 
-	if (totalUnits > 8)
+	if (isNaN(totalUnits))
+	{
+		$("#totalUnits").text("0");
+	}
+	else if (totalUnits > 8)
 	{
 		totalUnits = 8;
 		$("#totalUnits").text(totalUnits + " (max. allowed)");
 	}
-	else
+	else 
 	{
 		$("#totalUnits").text(totalUnits);
 	}
