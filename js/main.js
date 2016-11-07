@@ -21,15 +21,15 @@ $(document).ready(function(e)
 		// make the page not reload on button click
 		e.preventDefault();
 
-		$("#courses").append("<div class=\"form-group col-xs-12 col-sm-3\"><label for=\"cId" + courseCounter + "\">Course ID</label><input type=\"text\" class=\"form-control\" id=\"cId" + courseCounter + "\" placeholder=\"ex: MECH207\"></div><div class=\"form-group col-xs-12 col-sm-6\"><label for=\"courseInput\">Course Title</label><input type=\"text\" class=\"form-control\" id=\"cTitle" + courseCounter + "\" placeholder=\"ex: Mechanical Systems\"></div><div class=\"form-group col-xs-12 col-sm-3\"><label for=\"creditInput\"># of Credits</label><input type=\"text\" class=\"form-control\" class=\"cCredit" + courseCounter + "\" id=\"cCredit" + courseCounter + "\" placeholder=\"ex: 4\"></div>");
+		$("#courses").append("<div class=\"form-group col-xs-12 col-sm-3\"><label for=\"cId" + courseCounter + "\">Course ID</label><input type=\"text\" class=\"form-control\" id=\"cId" + courseCounter + "\" placeholder=\"ex: MECH207\"></div><div class=\"form-group col-xs-12 col-sm-6\"><label for=\"courseInput\">Course Title</label><input type=\"text\" class=\"form-control\" id=\"cTitle" + courseCounter + "\" placeholder=\"ex: Mechanical Systems\"></div><div class=\"form-group col-xs-12 col-sm-3\"><label for=\"creditInput\"># of Credits</label><input type=\"text\" class=\"form-control creditInput\" class=\"cCredit" + courseCounter + "\" id=\"cCredit" + courseCounter + "\" placeholder=\"ex: 4\"></div>");
+		$(".creditInput").change(function() {
+			updateTotal();
+		});
 		courseCounter++;
 	});
 
-	$(".creditInput").each(function()
-	{
-			$(this).change(function() {
-				updateTotal();
-			});
+	$(".creditInput").change(function() {
+		updateTotal();
 	});
 });
 
@@ -37,8 +37,8 @@ function updateTotal()
 {
 	var totalUnits = 0;
 	$(".creditInput").each(function() {
-		console.log($(this).val());
-    	totalUnits += $(this).val();
+		var currentVal =  parseInt($(this).val());
+    	totalUnits = (totalUnits + currentVal);
 	});
 
 	if (totalUnits > 8)
