@@ -12,3 +12,8 @@ ol
 {
 	text-align: left;
 }
+
+.lastScreen
+{
+	display: none;
+}

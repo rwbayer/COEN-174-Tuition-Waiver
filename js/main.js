@@ -38,6 +38,13 @@ $(document).ready(function(e)
 
 		$(".courseRow:last").remove();
 	});
+
+	if (location.hash.substr(1) == "triggerFinalScreen")
+	{
+		location.hash = "";
+		$(".hideOnLastScreen").hide();
+		$(".lastScreen").show();
+	}
 });
 
 function updateTotal()
