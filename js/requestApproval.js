@@ -26,6 +26,7 @@ $("#approve").click(function()
 		{
 			if (emailOfApprover == "isScottAndrews")
 			{
+				location.hash = "triggerFinalScreen";
 				location.reload();
 			}
 			else

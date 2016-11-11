@@ -48,9 +48,11 @@
 
   fclose($userFile);
 
+  $scottAndrewsEmail = 'rbayer@scu.edu';
+
   $isScottAndrews = false;
 
-  if ($email1 == 'rbayer@scu.edu' || $email2 == 'rbayer@scu.edu' || $email3 == 'rbayer@scu.edu' || $email4 == 'rbayer@scu.edu' || $email5 == 'rbayer@scu.edu')
+  if ($email1 == $scottAndrewsEmail || $email2 == $scottAndrewsEmail || $email3 == $scottAndrewsEmail || $email4 == $scottAndrewsEmail || $email5 == $scottAndrewsEmail)
   {
     $isScottAndrews = true;
   }
@@ -419,20 +421,24 @@
         }
         
         ?>
- 
-        <div class="col-xs-12 text-center noPrint">
+        
+        <div class="col-xs-12 text-center noPrint hideOnLastScreen">
           <div class="checkbox">
               <label><input type="checkbox" id="signature">All of the information in this form is correct to the best of my knowledge.</label>
           </div>
         </div>
 
-        <div class="col-xs-12 text-center noPrint">
+        <div class="col-xs-12 text-center noPrint hideOnLastScreen">
           <div class="col-xs-12 col-sm-6">
             <input type="button" id="reject" class="btn btn-danger btn-lg" value="Reject">
           </div>
           <div class="col-xs-12 col-sm-6">
             <input type="button" id="approve" class="btn btn-success btn-lg" value="Accept">
           </div>
+        </div>
+
+        <div class="col-xs-12 text-center noPrint lastScreen">
+          <input type="button" class="btn btn-success btn-lg" value="Print this page" onClick="window.print()">
         </div>
 
       </form>
