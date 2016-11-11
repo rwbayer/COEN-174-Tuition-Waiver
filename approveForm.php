@@ -40,11 +40,12 @@
 	$courseId6 = $varData[30];
 	$courseTitle6 = $varData[31];
 	$numCredits6 = $varData[32];
-	$email1 = $varData[33];
-	$email2 = $varData[34];
-	$email3 = $varData[35];
-	$email4 = $varData[36];
-	$email5 = $varData[37];
+	$studentFeeCheck = $varData[33];
+	$email1 = $varData[34];
+	$email2 = $varData[35];
+	$email3 = $varData[36];
+	$email4 = $varData[37];
+	$email5 = $varData[38];
 
 	fclose($userFile);
 
@@ -96,7 +97,7 @@
 
 	$courses = $courseId1.",".$courseTitle1.",".$numCredits1.",".$courseId2.",".$courseTitle2.",".$numCredits2.",".$courseId3.",".$courseTitle3.",".$numCredits3.",".$courseId4.",".$courseTitle4.",".$numCredits4.",".$courseId5.",".$courseTitle5.",".$numCredits5.",".$courseId6.",".$courseTitle6.",".$numCredits6.",";
 
-	$txt = $userInfo.$courses.$email1.",".$email2.",".$email3.",".$email4.",".$email5;
+	$txt = $userInfo.$courses.$studentFeeCheck.",".$email1.",".$email2.",".$email3.",".$email4.",".$email5;
 	$myfile = fopen($nameOfFile, "w");
 	fwrite($myfile, $txt);
 	fclose($myfile);

@@ -1,0 +1,1 @@
+John,W12345,Bill,2017,spring,scu,ta,Computer Science and Engineering,33.3,,,,,,,course1,stuff,5,course2,other stuff,3,,,,,,,,,,,,,,apolatnick@scu.edu,apolatnick@scu.edu,,,

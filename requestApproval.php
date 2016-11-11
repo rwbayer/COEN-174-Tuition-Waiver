@@ -39,11 +39,12 @@
   $courseId6 = $varData[30];
   $courseTitle6 = $varData[31];
   $numCredits6 = $varData[32];
-  $email1 = $varData[33];
-  $email2 = $varData[34];
-  $email3 = $varData[35];
-  $email4 = $varData[36];
-  $email5 = $varData[37];
+  $studentFeeCheck = $varData[33];
+  $email1 = $varData[34];
+  $email2 = $varData[35];
+  $email3 = $varData[36];
+  $email4 = $varData[37];
+  $email5 = $varData[38];
 
   fclose($userFile);
 
@@ -352,6 +353,36 @@
           <h3>TOTAL: $<span id="totalCash"><span></h3>
 
         </div>
+
+        <?php
+        if($studentFeeCheck == "on")
+        {
+          echo("<div class=\"row-spacer\">
+            <div id=\"associationFee\" class=\"col-xs-12\">
+              <div class=\"checkbox\">
+               <center>
+                  <input type=\"checkbox\" id=\"associationFeeCheck\" disabled checked>
+                  <label style=\"font-size: 15px\">Do you wish to waive the Engineering Design Center and Student Association Fee ($150 per quarter)?</label>
+                </center>
+             </div>
+           </div>
+         </div>");
+        }
+        else{
+          echo("<div class=\"row-spacer\">
+            <div id=\"associationFee\" class=\"col-xs-12\">
+              <div class=\"checkbox\">
+               <center>
+                  <input type=\"checkbox\" id=\"associationFeeCheck\" disabled>
+                  <label style=\"font-size: 15px\">Do you wish to waive the Engineering Design Center and Student Association Fee ($150 per quarter)?</label>
+                </center>
+             </div>
+           </div>
+         </div>");
+
+      }
+
+      ?>
 
         <div class="col-xs-12 col-sm-4 col-sm-offset-4 text-center">
           <?php

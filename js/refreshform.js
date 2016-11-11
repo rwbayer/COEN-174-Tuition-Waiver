@@ -33,6 +33,7 @@ $(document).ready(function(){
 		var courseId6 = $("#cId5").val();
 		var courseTitle6 = $("#cTitle5").val();
 		var numCredits6 = $("#cCredit5").val();
+		var feeCheck = $("#associationFeeCheck:checked").val();
 
 		var email = $("#emailInput").val();
 		var semail = $("#sEmailInput").val();
@@ -113,9 +114,11 @@ $(document).ready(function(){
 			courseId61: courseId6,
 			courseTitle61: courseTitle6,
 			numCredits61: numCredits6,
+			studentFeeCheck1: feeCheck,
 			
 			email1: email,
 			semail1: semail
+			
 			}, function(data){
 				alert(data);
 				$('#form')[0].reset();
