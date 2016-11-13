@@ -31,6 +31,11 @@ $(document).ready(function(e)
 		updateTotal();
 	});
 
+	$(document.body).on('change', '#associationFeeCheck', function() 
+	{
+		updateTotal();
+	});
+
 	$(document.body).on('click', '.removeRow', function(e)
 	{
 		// make the page not reload on button click
@@ -75,6 +80,10 @@ function updateTotal()
 
 	var totalCash = totalUnits * 928;
 
+	if ($("#associationFeeCheck:checked").length > 0)
+	{
+		totalCash += 150;
+	}
 
 	$("#totalCash").text(totalCash);
 
