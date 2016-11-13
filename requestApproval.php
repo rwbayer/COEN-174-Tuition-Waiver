@@ -385,8 +385,11 @@
       }
 
       ?>
-
-        <div class="col-xs-12 col-sm-4 col-sm-offset-4 text-center">
+      <div class="col-xs-12 text-center">
+        <hr>
+      </div>
+      
+        <div class="col-xs-12 col-sm-4 col-sm-offset-4 text-center"> 
           <?php
               if ($email3 !== '')
               {
