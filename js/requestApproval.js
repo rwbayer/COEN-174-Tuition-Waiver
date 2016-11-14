@@ -41,13 +41,21 @@ $("#approve").click(function()
 $("#reject").click(function()
 {
 	var key = $("meta[name=key]").attr("content");
+	var message = "";
 
-	$.post("rejectForm.php",
+	var approvalMessage = prompt("Please enter your reason for rejecting this request:", "");
+	if (approvalMessage != null)
 	{
-		key: key
-	}, function(data)
-	{
-		alert(data);
-		$('#form')[0].reset();
-	});
+	    message = approvalMessage;
+
+	    $.post("rejectForm.php",
+		{
+			key: key,
+			message: message
+		}, function(data)
+		{
+			alert(data);
+			$('#form')[0].reset();
+		});
+	}
 });

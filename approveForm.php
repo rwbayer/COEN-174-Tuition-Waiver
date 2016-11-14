@@ -82,7 +82,7 @@
 	}
 	else
 	{
-		echo("successfully approved. use browser to print");
+		echo("Successfully approved. Use the print button or your browser to print.");
 	}
 
 	$userInfo = $name.",".$id.",".$advisor.",".$year.",".$quarter.",".$dept.",".$userType.",".$major.",";
