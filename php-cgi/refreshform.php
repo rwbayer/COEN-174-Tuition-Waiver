@@ -56,7 +56,7 @@ $filename = $formId.".txt";
 
 $subject = "Approval Requested";
 $header = "From: no-reply@SCUTuitionForm.com";
-$url = "students.engr.scu.edu/~rbayer/COEN174/requestApproval.php?key=".$formId;
+$url = "students.engr.scu.edu/~rbayer/COEN174/php-cgi/requestApproval.php?key=".$formId;
 $msg = "You're approval has been requested for the Tuition & Fees Authorization Form provided at the following link: ".$url;
 $mail = mail($email2, $subject, $msg, $header);
 if($mail){
