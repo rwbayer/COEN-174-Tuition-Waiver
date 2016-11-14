@@ -64,7 +64,7 @@ if($mail){
 }else{
 	echo "email failed to send";
 }
-$destination = "data/".$filename;
+$destination = "/DCNFS/users/web/pages/rbayer/COEN174/data/".$filename;
 $userInfo = $name2.",".$id2.",".$advisor2.",".$year2.",".$quarter2.",".$dept2.",".$userType2.",".$major2.",";
 if($userType2 == 'ta'){
 	$userInfo .= $percentFTE2.",,,,,,,";
