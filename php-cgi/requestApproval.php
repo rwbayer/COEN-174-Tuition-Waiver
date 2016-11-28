@@ -307,15 +307,19 @@
 
         <div class="col-xs-12">
           <h4><span id="totalUnits"></span> Total units of tuition to pay ($928 per unit - FY1617)</h4>
-
+	  <?php
+	  if($studentFeeCheck == "on")
+	  {          
+	    echo("<h4>$150 to waive the Engineering Design Center and Student Association Fee</h4>");
+	  }
+	  ?>
           <h3>TOTAL: $<span id="totalCash"><span></h3>
-
         </div>
 
         <?php
         if($studentFeeCheck == "on")
         {
-          echo("<div class=\"row-spacer\">
+          echo("<div class=\"row-spacer\" style=\"display:none;\">
             <div id=\"associationFee\" class=\"col-xs-12\">
               <div class=\"checkbox\">
                <center>
@@ -327,7 +331,7 @@
          </div>");
         }
         else{
-          echo("<div class=\"row-spacer\">
+          echo("<div class=\"row-spacer\" style=\"display:none;\">
             <div id=\"associationFee\" class=\"col-xs-12\">
               <div class=\"checkbox\">
                <center>
