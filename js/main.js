@@ -77,8 +77,8 @@ function updateTotal()
 	{
 		$("#totalUnits").text(totalUnits);
 	}
-
-	var totalCash = totalUnits * 928;
+	var dollarsPerUnit = 928;
+	var totalCash = totalUnits * dollarsPerUnit;
 
 	if ($("#associationFeeCheck:checked").length > 0)
 	{
