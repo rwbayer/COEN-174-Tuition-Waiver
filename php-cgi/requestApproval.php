@@ -1,7 +1,8 @@
 <?php
   $headerStringValue = $_REQUEST['key'];
 
-  $nameOfFile = "/DCNFS/users/web/pages/rbayer/COEN174/data/". $headerStringValue . ".txt";
+  // $nameOfFile = "/DCNFS/users/web/pages/rbayer/COEN174/data/". $headerStringValue . ".txt";
+  $nameOfFile = "../data/". $headerStringValue . ".txt";
   $userFile = fopen($nameOfFile,"r") or die ("Error, file could not be opened or does not exist");
   $contents = fread($userFile, filesize($nameOfFile));
   $varData = explode(",",$contents);
@@ -128,37 +129,20 @@
 
         <div class="form-group col-xs-12 col-sm-4">
           <label for="radio-inline">Role:&nbsp;</label>
-          <div class="radios">
             <?php
               if ($userType == "ta")
               {
-                echo("<div class=\"radio-inline\">
-                      <label><input type=\"radio\" name=\"roleRadio\" onclick=\"handleRadioClick(this);\" value=\"ta\" checked disabled>TA</label>
-                    </div>
-                    <div class=\"radio-inline\">
-                      <label><input type=\"radio\" name=\"roleRadio\" onclick=\"handleRadioClick(this);\" value=\"ra\" disabled>RA</label>
-                    </div>
-                  ");
+                echo("<input type=\"text\" class=\"form-control\" placeholder=\"\" value=\"TA\" disabled>");
               }
               else
               {
-                echo("<div class=\"radio-inline\">
-                      <label><input type=\"radio\" name=\"roleRadio\" onclick=\"handleRadioClick(this);\" value=\"ta\" disabled>TA</label>
-                    </div>
-                    <div class=\"radio-inline\">
-                      <label><input type=\"radio\" name=\"roleRadio\" onclick=\"handleRadioClick(this);\" value=\"ra\" checked disabled>RA</label>
-                    </div>
-                  ");
+               echo("<input type=\"text\" class=\"form-control\" placeholder=\"\" value=\"RA\" disabled>");
               }
             ?>
-            
-          </div>
         </div>
         <div class="form-group col-xs-12 col-sm-4">
           <label for="majorSelect">Major:</label>
-          <select class="form-control" id="majorSelect" disabled>
-            <option disabled selected><?php echo $major ?></option>
-          </select>
+          <input type="text" class="form-control" placeholder="" value="<?php echo $major ?>" disabled>
         </div>
         <div class="form-group col-xs-12 col-sm-4">
           <label for="emailInput">Email</label>
@@ -174,42 +158,15 @@
              
                 if ($percentFTE == "33.3")
                 {
-                  echo("<div class=\"radio-inline\">
-                        <label><input type=\"radio\" name=\"taFTERadio\" value=\"33.3\" checked disabled>33.3%</label>
-                      </div>
-                      <div class=\"radio-inline\">
-                        <label><input type=\"radio\" name=\"taFTERadio\" value=\"66.6\" disabled>66.6%</label>
-                      </div>
-                      <div class=\"radio-inline\">
-                        <label><input type=\"radio\" name=\"taFTERadio\" value=\"100\" disabled>100%</label>
-                      </div>"
-                  );
+                  echo("<input type=\"text\" class=\"form-control\" placeholder=\"\" value=\"33.3%\" disabled>");
                 }
                 else if ($percentFTE == "66.6")
                 {
-                    echo("<div class=\"radio-inline\">
-                        <label><input type=\"radio\" name=\"taFTERadio\" value=\"33.3\" disabled>33.3%</label>
-                      </div>
-                      <div class=\"radio-inline\">
-                        <label><input type=\"radio\" name=\"taFTERadio\" value=\"66.6\" checked disabled>66.6%</label>
-                      </div>
-                      <div class=\"radio-inline\">
-                        <label><input type=\"radio\" name=\"taFTERadio\" value=\"100\" disabled>100%</label>
-                      </div>"
-                  );
+                  echo("<input type=\"text\" class=\"form-control\" placeholder=\"\" value=\"66.6%\" disabled>");
                 }
                 else
                 {
-                    echo("<div class=\"radio-inline\">
-                        <label><input type=\"radio\" name=\"taFTERadio\" value=\"33.3\" disabled>33.3%</label>
-                      </div>
-                      <div class=\"radio-inline\">
-                        <label><input type=\"radio\" name=\"taFTERadio\" value=\"66.6\" disabled>66.6%</label>
-                      </div>
-                      <div class=\"radio-inline\">
-                        <label><input type=\"radio\" name=\"taFTERadio\" value=\"100\" checked disabled>100%</label>
-                      </div>"
-                  );
+                  echo("<input type=\"text\" class=\"form-control\" placeholder=\"\" value=\"100%\" disabled>");
                 }
               echo("</div>");
           }
