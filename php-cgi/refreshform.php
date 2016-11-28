@@ -8,43 +8,53 @@ function generateRandomString($length) {
     }
     return $randomString;
 }
-$name2 = $_POST['name1'];
-$id2 = $_POST['id1'];
-$advisor2 = $_POST['advisor1'];
-$year2 = $_POST['year1'];
-$quarter2 = $_POST['quarter1'];
-$dept2 = $_POST['dept1'];
-$userType2 = $_POST['userType1'];
-$major2 = $_POST['major1'];
+function removeCommas($str){
+  $array=explode(",", $str);
+  $size=count($array);
+  $newStr='';
+  for($x=0; $x<$size; $x++){
+    $newStr.=$array[$x];
+  }
+  return $newStr;
+}
+
+$name2 = removeCommas($_POST['name1']);
+$id2 = removeCommas($_POST['id1']);
+$advisor2 = removeCommas($_POST['advisor1']);
+$year2 = removeCommas($_POST['year1']);
+$quarter2 = removeCommas($_POST['quarter1']);
+$dept2 = removeCommas($_POST['dept1']);
+$userType2 = removeCommas($_POST['userType1']);
+$major2 = removeCommas($_POST['major1']);
 if($userType2 == 'ta'){
 	$percentFTE2 = $_POST['percentFTE1'];
 }else{
-	$fundSrc2 = $_POST['fundSrc1'];
-	$fundDept2 = $_POST['fundDept1'];
-	$pgmCode2 = $_POST['pgmCode1'];
-	$activity2 = $_POST['activity1'];
-	$class2 = $_POST['curClass1'];
-	$projId2 = $_POST['projId1']; 
+	$fundSrc2 = removeCommas($_POST['fundSrc1']);
+	$fundDept2 = removeCommas($_POST['fundDept1']);
+	$pgmCode2 = removeCommas($_POST['pgmCode1']);
+	$activity2 = removeCommas($_POST['activity1']);
+	$class2 = removeCommas($_POST['curClass1']);
+	$projId2 = removeCommas($_POST['projId1']); 
 }
 
-$courseId12 = $_POST['courseId11']; 
-$courseTitle12 = $_POST['courseTitle11'];
-$numCredits12 = $_POST['numCredits11'];
-$courseId22 = $_POST['courseId21'];
-$courseTitle22 = $_POST['courseTitle21'];
-$numCredits22 = $_POST['numCredits21'];
-$courseId32 = $_POST['courseId31'];
-$courseTitle32 = $_POST['courseTitle31'];  
-$numCredits32 = $_POST['numCredits31'];
-$courseId42 = $_POST['courseId41'];
-$courseTitle42 = $_POST['courseTitle41']; 
-$numCredits42 = $_POST['numCredits41'];
-$courseId52 = $_POST['courseId51'];
-$courseTitle52 = $_POST['courseTitle51'];
-$numCredits52 = $_POST['numCredits51'];
-$courseId62 = $_POST['courseId61'];
-$courseTitle62 = $_POST['courseTitle61'];
-$numCredits62 = $_POST['numCredits61'];
+$courseId12 = removeCommas($_POST['courseId11']); 
+$courseTitle12 = removeCommas($_POST['courseTitle11']);
+$numCredits12 = removeCommas($_POST['numCredits11']);
+$courseId22 = removeCommas($_POST['courseId21']);
+$courseTitle22 = removeCommas($_POST['courseTitle21']);
+$numCredits22 = removeCommas($_POST['numCredits21']);
+$courseId32 = removeCommas($_POST['courseId31']);
+$courseTitle32 = removeCommas($_POST['courseTitle31']);  
+$numCredits32 = removeCommas($_POST['numCredits31']);
+$courseId42 = removeCommas($_POST['courseId41']);
+$courseTitle42 = removeCommas($_POST['courseTitle41']); 
+$numCredits42 = removeCommas($_POST['numCredits41']);
+$courseId52 = removeCommas($_POST['courseId51']);
+$courseTitle52 = removeCommas($_POST['courseTitle51']);
+$numCredits52 = removeCommas($_POST['numCredits51']);
+$courseId62 = removeCommas($_POST['courseId61']);
+$courseTitle62 = removeCommas($_POST['courseTitle61']);
+$numCredits62 = removeCommas($_POST['numCredits61']);
 $studentFeeCheck2 = $_POST['studentFeeCheck1'];
 
 $email2 = $_POST['email1'];
