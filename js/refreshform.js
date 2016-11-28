@@ -80,7 +80,7 @@ $(document).ready(function(){
 		}
 		else
 		{
-			$.post("refreshform.php", {
+			$.post("php-cgi/refreshform.php", {
 			name1: nameInput,
 			id1: id,
 			advisor1: advisor,

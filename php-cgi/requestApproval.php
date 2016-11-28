@@ -1,7 +1,7 @@
 <?php
   $headerStringValue = $_REQUEST['key'];
 
-  $nameOfFile = "data/". $headerStringValue . ".txt";
+  $nameOfFile = "/DCNFS/users/web/pages/rbayer/COEN174/data/". $headerStringValue . ".txt";
   $userFile = fopen($nameOfFile,"r") or die ("Error, file could not be opened or does not exist");
   $contents = fread($userFile, filesize($nameOfFile));
   $varData = explode(",",$contents);
@@ -75,13 +75,13 @@
     <title>Tuition and Fees Payment Authorization for Graduate Students</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <meta name="key" content="<?php echo $headerStringValue ?>"/>
 
-    <link href="css/request.css" rel="stylesheet">
+    <link href="../css/request.css" rel="stylesheet">
 
-    <link rel="stylesheet" media="print" href="css/print.css">
+    <link rel="stylesheet" media="print" href="../css/print.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -458,8 +458,8 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/requestApproval.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/requestApproval.js"></script>
   </body>
 </html>

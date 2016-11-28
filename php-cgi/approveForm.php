@@ -2,7 +2,7 @@
 	$key = $_POST['key'];
 	$emailOfNextApprover = $_POST['emailOfApprover'];
 
-	$nameOfFile = "data/". $key . ".txt";
+	$nameOfFile = "/DCNFS/users/web/pages/rbayer/COEN174/data/". $key . ".txt";
 	$userFile = fopen($nameOfFile,"r") or die ("Error, file could not be opened or does not exist");
 	$contents = fread($userFile, filesize($nameOfFile));
 	$varData = explode(",",$contents);
@@ -49,6 +49,7 @@
 
 	fclose($userFile);
 
+
 	if ($emailOfNextApprover != "isScottAndrews")
 	{
 		// save the email in the next available spot
@@ -60,16 +61,16 @@
 		{
 			$email4 = $emailOfNextApprover;
 		}
-		else if ($email5 == '')
+		else
 		{
-			$email5 == $emailOfNextApprover;
+			$email5 = $emailOfNextApprover;
 		}
 	}
 
 
 	$subject = "Approval Requested";
 	$header = "From: no-reply@SCUTuitionForm.com";
-	$url = "students.engr.scu.edu/~rbayer/COEN174/requestApproval.php?key=".$key;
+	$url = "students.engr.scu.edu/~rbayer/COEN174/php-cgi/requestApproval.php?key=".$key;
 	$msg = "You're approval has been requested for the Tuition & Fees Authorization Form provided at the following link: ".$url;
 	if ($emailOfNextApprover != "isScottAndrews")
 	{

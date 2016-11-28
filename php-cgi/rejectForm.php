@@ -14,7 +14,7 @@
 	}
 	$msg .= $message;
 
-	$nameOfFile = "data/". $key . ".txt";
+	$nameOfFile = "/DCNFS/users/web/pages/rbayer/COEN174/data/". $key . ".txt";
   	$userFile = fopen($nameOfFile,"r") or die ("Error, file could not be opened or does not exist");
   	$contents = fread($userFile, filesize($nameOfFile));
   	$varData = explode(",",$contents);
