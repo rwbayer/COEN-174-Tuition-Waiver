@@ -50,21 +50,19 @@
 	fclose($userFile);
 
 
-	if ($emailOfNextApprover != "isScottAndrews")
+	
+	// save the email in the next available spot
+	if ($email3 == '')
 	{
-		// save the email in the next available spot
-		if ($email3 == '')
-		{
-			$email3 = $emailOfNextApprover;
-		}
-		else if ($email4 == '')
-		{
-			$email4 = $emailOfNextApprover;
-		}
-		else
-		{
-			$email5 = $emailOfNextApprover;
-		}
+		$email3 = $emailOfNextApprover;
+	}
+	else if ($email4 == '')
+	{
+		$email4 = $emailOfNextApprover;
+	}
+	else
+	{
+		$email5 = $emailOfNextApprover;
 	}
 
 
