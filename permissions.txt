@@ -1,5 +1,6 @@
 chmod 755 COEN174
 chmod 755 css
-chmod 755 data
+chmod 700 data
 chmod 755 fonts
 chmod 755 js
+chmod 755 php-cgi
