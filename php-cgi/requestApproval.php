@@ -1,8 +1,7 @@
 <?php
   $headerStringValue = $_REQUEST['key'];
 
-  // $nameOfFile = "/DCNFS/users/web/pages/rbayer/COEN174/data/". $headerStringValue . ".txt";
-  $nameOfFile = "../data/". $headerStringValue . ".txt";
+  $nameOfFile = "/DCNFS/users/web/pages/rbayer/COEN174/data/". $headerStringValue . ".txt";
   $userFile = fopen($nameOfFile,"r") or die ("Error, file could not be opened or does not exist");
   $contents = fread($userFile, filesize($nameOfFile));
   $varData = explode(",",$contents);
